@@ -20,7 +20,7 @@ const styles = theme => ({
 
 function CustomizedBadge(props) {
   const { classes } = props;
-
+  
   return (
     <IconButton aria-label="Cart" onClick={() => pass()}>
       <Badge badgeContent={4} color="primary" classes={{ badge: classes.badge }}>

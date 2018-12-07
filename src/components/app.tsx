@@ -5,6 +5,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 // internal file imports
 import LabelBottomNavigation from './bottomNavigation';
 import FilledInputAdornments from './input';
+import MediaCard from './card';
 
 import { pass } from './iconSwapping';
 
@@ -26,6 +27,14 @@ const styles = () => createStyles({
 
 });
 
+const cardDisplay = (x : number) => {
+  while (x > 0) {
+  console.log(x)
+  x--;
+  return <MediaCard /> 
+  }
+}
+
 interface IProps extends WithStyles<typeof styles> {}
 
 class DashBoard extends React.Component<IProps> {
@@ -34,6 +43,9 @@ class DashBoard extends React.Component<IProps> {
       <MuiThemeProvider theme={theme}>
         <div>
           DashBoard
+          <div id="wrap">
+            {cardDisplay(8)}
+          </div>
           <FilledInputAdornments />
           <LabelBottomNavigation />
         </div>

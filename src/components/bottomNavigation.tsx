@@ -11,6 +11,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { cIcon, folder } from './iconSwapping';
 import CustomizedBadge from './badge';
+import { Link } from 'react-router-dom';
 
 const theme = createMuiTheme({
   overrides: {
@@ -50,7 +51,9 @@ class LabelBottomNavigation extends React.Component<IProps> {
     return (
       <MuiThemeProvider theme={theme}>
         <BottomNavigation value={value} onChange={this.handleChange} className={this.props.classes.root}>
-          <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
+          <Link to="/Info">
+            <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
+          </Link>
           <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
           <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
           <BottomNavigationAction label="Folder" value="folder" icon={cIcon(folder)} />
