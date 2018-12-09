@@ -27,13 +27,9 @@ const styles = () => createStyles({
 
 });
 
-const cardDisplay = (x : number) => {
-  while (x > 0) {
-  console.log(x)
-  x--;
-  return <MediaCard /> 
-  }
-}
+// const repeat <T> = (v:T, n:number): T[] => n===0?[]:[v,...repeat(v,n-1)]
+
+// const cardDisplay = (x : number) => repeat(<MediaCard />, x)
 
 interface IProps extends WithStyles<typeof styles> {}
 
