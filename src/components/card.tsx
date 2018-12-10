@@ -9,6 +9,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import FormDialog from './popUps';
+
 const styles = {
   card: {
     maxWidth: 345,
@@ -40,7 +42,7 @@ function MediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          <FormDialog/>
         </Button>
         <Button size="small" color="primary">
           Learn More

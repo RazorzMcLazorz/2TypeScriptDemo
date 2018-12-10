@@ -27,9 +27,8 @@ const styles = () => createStyles({
 
 });
 
-// const repeat <T> = (v:T, n:number): T[] => n===0?[]:[v,...repeat(v,n-1)]
+const repeat = <T extends any> (v:T, n:number): T[] => n===0?[]:[v, ...repeat(v,n-1)]
 
-// const cardDisplay = (x : number) => repeat(<MediaCard />, x)
 
 interface IProps extends WithStyles<typeof styles> {}
 
@@ -40,7 +39,7 @@ class DashBoard extends React.Component<IProps> {
         <div>
           DashBoard
           <div id="wrap">
-            {cardDisplay(8)}
+            {repeat(<MediaCard /> , 6)}
           </div>
           <FilledInputAdornments />
           <LabelBottomNavigation />
